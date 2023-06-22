@@ -1,5 +1,7 @@
 import './App.css';
-import Nav from './components/Nav/Nav';
+import Nav from "./components/Nav/Nav";
+import "./styles/partials/Resets.scss"
+
 
 function App() {
   return (

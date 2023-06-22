@@ -1,0 +1,63 @@
+@use "../../styles/partials/Variables.scss" as *;
+
+#searchImage {
+  background-image: url("../../assets/Images/search.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 0.5rem;
+  background-color: #fafafa;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  width: 80%;
+
+  &::placeholder{
+    @include brainFlixBlack;
+  }
+}
+
+.nav {
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+
+    &-search-input {
+        @include buttonBorder;
+    }
+
+    &-div {
+        width: 36px;
+        height: 36px;
+        background-image: url("../../assets/Images/Mohan-muruge.jpg");
+        background-position: left;
+        background-size: cover;
+        border-radius: 50%;
+    }
+  }
+
+  &__div {
+    @include mobileComponentPadding;
+    padding-bottom: 0;
+
+    &-upload {
+      display: flex;
+      @include mobileComponentPadding;
+      padding-top: 0;
+
+      &-button {
+        background-image: url("../../assets/Images/upload.svg");
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: 0.5rem;
+        padding: 0.5rem 1rem 0.5rem 2rem;
+        width: 100%;
+        text-align: center;
+        height: 40px;
+        @include brainFlixBlue;
+        @include white;
+        @include buttonBorder;
+        font-weight: 600;
+        line-height: 1.25rem;
+      }
+    }
+  }
+}
