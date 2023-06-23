@@ -19,20 +19,11 @@ export default function Nav() {
           id="searchImage"
         ></input>
         <div className="nav__label-div">
-          {/* <img
-            className="nav__div-avatar"
-            src={avatar}
-            alt="Avatar Picture"
-          ></img> */}
+
         </div>
       </label>
 
       <div className="nav__div-upload">
-        {/* <img
-          className="nav__div-upload-image"
-          src={uploadImage}
-          alt="Upload Image"
-        ></img> */}
         <button
           className="nav__div-upload-button"
         >UPLOAD</button>
