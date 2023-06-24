@@ -1,0 +1,45 @@
+@use "../../styles/partials/Variables.scss" as *;
+
+.video__list{
+    margin-right: 1rem;
+
+    &-item{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        @include avenirFont;
+        line-height: 1.125rem;
+
+        &-image{
+            width: 100%;
+            object-fit: contain;
+
+            &-container{
+                background-color: #E1E1E1;
+                max-width: 125px;
+                max-height: 75px;
+                overflow: hidden;
+                margin: 0.5rem 1rem;
+                display: flex;
+                align-items: center;
+                border-radius: 4px;
+            }
+        }
+
+        &-text{
+            text-align: left;
+
+            &--bold{
+                font-weight: 600;
+                padding-bottom: 0.8rem;
+            }
+        }
+    }
+}
+
+.nextVideos{
+    @include silver;
+    @include mobileComponentPadding;
+    font-weight: 500;
+    text-align: left;
+}

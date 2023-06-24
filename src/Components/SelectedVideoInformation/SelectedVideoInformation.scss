@@ -1,0 +1,42 @@
+@use "../../styles/partials/Variables.scss" as *;
+
+.selectedInfo {
+  text-align: left;
+  @include avenirFont;
+  @include mobileComponentPadding;
+
+  &__main{
+    padding-top: 1rem;
+  }
+  &__div {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    padding-right: 2rem;
+
+    &-right {
+      display: flex;
+      @include silver;
+    }
+  }
+  &__h2 {
+    padding-top: 0;
+    font-weight: 600;
+    line-height: 32px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #E1E1E1;
+    padding-bottom: 1rem;
+  }
+  &__channel {
+    font-weight: 600;
+  }
+  &__desc{
+    border-top: 1px solid #E1E1E1;
+    padding-top: 1rem;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+  }
+  &__icon{
+    margin-right: 0.5rem;
+  }
+}
