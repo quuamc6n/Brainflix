@@ -12,7 +12,7 @@ const Comments = (props) => {
             <div className="list__item-div-container">
               <div className="list__item-div">
                 <p className="list__item-div-name">{ele.name}</p>
-                <span className="list__item-div-date">{ele.timestamp}</span>
+                <span className="list__item-div-date">{props.getDate(ele.timestamp)}</span>
               </div>
               <div>
                 <p className="list__item-div-comment">{ele.comment}</p>

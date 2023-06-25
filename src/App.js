@@ -16,13 +16,18 @@ const clickHandler = (video) => {
   setSelectedVideo(video)
 };
 
+const getDate = (timestamp) => {
+  let date = new Date(timestamp);
+  return date.toLocaleDateString();
+};
+
 return (
     <div className="App">
       <Nav />
       <SelectedVideo video={selectedVideo}/>
-      <SelectedVideoInformation video={selectedVideo} />
+      <SelectedVideoInformation video={selectedVideo} getDate={getDate}/>
       <JoinTheConversation />
-      <Comments data={selectedVideo}/>
+      <Comments data={selectedVideo} getDate={getDate}/>
       <VideoList data={videoData} video={selectedVideo} clickHandler={clickHandler}/>
     </div>
   );

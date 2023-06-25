@@ -19,7 +19,7 @@ const SelectedVideoInformation = (props) => {
           </div>
         </div>
         <div className="selectedInfo__div">
-          <p className="selectedInfo__date">{props.video.timestamp}</p>
+          <p className="selectedInfo__date">{props.getDate(props.video.timestamp)}</p>
           <div className="selectedInfo__div-right">
             <img
               className="selectedInfo__icon"
