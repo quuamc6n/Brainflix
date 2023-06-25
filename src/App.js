@@ -6,6 +6,8 @@ import SelectedVideo from "./components/SelectedVideo/SelectedVideo";
 import videoData from "./data/video-details.json";
 import SelectedVideoInformation from "./components/SelectedVideoInformation/SelectedVideoInformation";
 import VideoList from "./components/VideoList/VideoList";
+import Comments from "./components/Comments/Comments";
+import JoinTheConversation from "./components/JoinTheConversation/JoinTheConversation";
 
 function App() {
 const [selectedVideo, setSelectedVideo] = useState(videoData[0]);
@@ -19,7 +21,8 @@ return (
       <Nav />
       <SelectedVideo video={selectedVideo}/>
       <SelectedVideoInformation video={selectedVideo} />
-
+      <JoinTheConversation />
+      <Comments data={selectedVideo}/>
       <VideoList data={videoData} video={selectedVideo} clickHandler={clickHandler}/>
     </div>
   );

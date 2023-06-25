@@ -7,7 +7,7 @@ const VideoList = (props) => {
 
   return (
     <ul className="video__list">
-    <p className="nextVideos">NEXT VIDEOS</p>
+      <p className="nextVideos">NEXT VIDEOS</p>
       {filterVideo.map((ele) => {
         return (
           <li
