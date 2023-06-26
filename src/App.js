@@ -8,6 +8,7 @@ import SelectedVideoInformation from "./components/SelectedVideoInformation/Sele
 import VideoList from "./components/VideoList/VideoList";
 import Comments from "./components/Comments/Comments";
 import JoinTheConversation from "./components/JoinTheConversation/JoinTheConversation";
+import "./styles/partials/Breakpoints.scss";
 
 function App() {
 const [selectedVideo, setSelectedVideo] = useState(videoData[0]);

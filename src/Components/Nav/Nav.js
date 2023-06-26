@@ -18,15 +18,12 @@ export default function Nav() {
           placeholder="Search"
           id="searchImage"
         ></input>
-        <div className="nav__label-div">
-
-        </div>
+        <div className="nav__label-div"></div>
       </label>
 
       <div className="nav__div-upload">
-        <button
-          className="nav__div-upload-button"
-        >UPLOAD</button>
+        <button className="nav__div-upload-button">UPLOAD</button>
+        <div className="nav__div-upload-tablet"></div>
       </div>
     </nav>
   );
