@@ -24,7 +24,7 @@ const VideoList = (props) => {
                 alt={ele.title}
               ></img>
             </div>
-            <div>
+            <div className="video__list-item-text-container">
               <p className="video__list-item-text video__list-item-text--bold">
                 {ele.title}
               </p>

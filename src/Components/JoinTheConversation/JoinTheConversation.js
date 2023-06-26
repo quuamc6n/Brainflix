@@ -12,7 +12,7 @@ const JoinTheConversation = () => {
         <div className="main__div-form-container">
             <h2 className="main__div-form-h2">JOIN THE CONVERSATION</h2>
             <form className="main__div-form">
-                <label>
+                <label className="main__div-form-label">
                     <input id="newComment"
                     className="main__div-form-input"
                     type="textarea"
