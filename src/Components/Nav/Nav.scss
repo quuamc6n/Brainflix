@@ -1,0 +1,102 @@
+@use "../../styles/partials/Variables.scss" as *;
+@use "../../styles/partials/Breakpoints.scss" as *;
+
+#searchImage {
+  background-image: url("../../assets/Images/search.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 0.5rem;
+  background-color: #fafafa;
+  padding: 0.5rem 1rem 0.5rem 2rem;
+  width: 80%;
+  @include tablet {
+    width: inherit;
+  }
+
+  &::placeholder {
+    @include brainFlixBlack;
+  }
+}
+
+.nav {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+    @include tablet {
+      width: 100%;
+      margin-left: 5rem;
+    }
+
+    &-search-input {
+      @include buttonBorder;
+    }
+
+    &-div {
+      width: 36px;
+      height: 36px;
+      background-image: url("../../assets/Images/Mohan-muruge.jpg");
+      background-position: left;
+      background-size: cover;
+      border-radius: 50%;
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+  &__div {
+    @include mobileComponentPadding;
+    padding-bottom: 0;
+    @include tablet {
+      padding-top: 0;
+      margin-left: 1rem;
+    }
+
+    &-upload {
+      display: flex;
+      @include mobileComponentPadding;
+      padding-top: 0;
+      @include tablet {
+        width: 100%;
+        padding: 0;
+        &-tablet{
+          width: 40px;
+          height: 40px;
+          background-image: url("../../assets/Images/Mohan-muruge.jpg");
+          background-position: left;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border-radius: 50%;
+        }
+      }
+
+      &-button {
+        background-image: url("../../assets/Images/upload.svg");
+        background-repeat: no-repeat;
+        background-position-y: center;
+        background-position-x: 0.5rem;
+        padding: 0.5rem 1rem 0.5rem 2rem;
+        width: 100%;
+        text-align: center;
+        height: 40px;
+        @include brainFlixBlue;
+        @include white;
+        @include buttonBorder;
+        font-weight: 600;
+        line-height: 1.25rem;
+        @include tablet {
+          width: 60%;
+          margin-right: 1rem;
+        }
+      }
+    }
+  }
+}

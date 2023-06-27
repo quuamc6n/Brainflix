@@ -1,0 +1,12 @@
+@use "../../styles/partials/Breakpoints.scss" as *;
+@use "../../styles/partials/Variables.scss" as *;
+
+.selectedVideo{
+    width: 100%;
+    @include tablet{
+        width: 90%;
+    }
+    &__div{
+        background-color: #000000;
+    }
+}

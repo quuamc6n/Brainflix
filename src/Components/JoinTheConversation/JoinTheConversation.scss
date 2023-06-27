@@ -1,0 +1,96 @@
+@use "../../styles/partials/Variables.scss" as *;
+@use "../../styles/partials/Breakpoints.scss" as *;
+
+.main{
+    @include avenirFont;
+    @include tablet{
+        @include tabletDesktopSidePadding;
+    }
+
+    &__count{
+        text-align: left;
+        @include mobileComponentPadding;
+        font-weight: 500;
+        padding-bottom: 0.5rem;
+    }
+    &__div{
+        display: flex;
+        margin: 1rem 1rem 0 1rem;
+        border-bottom: 1px solid #E1E1E1;
+
+        &-img{
+            width: 44px;
+            height: 44px;
+            background-image: url("../../assets/Images/Mohan-muruge.jpg");
+            background-position: left;
+            background-size: cover;
+            border-radius: 50%;
+            background-color: #E1E1E1;
+            padding-right: 2.75rem;
+            position: relative;
+            top: 34px;
+            @include tablet{
+                top: 24px;
+            }
+        }
+        &-form{
+            margin: 0.5rem 0 1rem 0;
+            @include tablet{
+                display: flex;
+            }
+
+            &-h2{
+                font-size: 0.875rem;
+                @include silver;
+                text-align: left;
+            }
+            &-container{
+                margin-left: 1rem;
+                width: 100%;
+            }
+            &-label{
+                
+                @include tablet{
+                    width: 90%;
+                    margin-right: 1.5rem;
+                }
+            }
+            &-input{
+                width: 100%;
+                height: 7rem;
+                border-radius: 4px;
+                background-color: #FAFAFA;    
+                border: 1px solid #E1E1E1;
+                font-weight: 500;
+                @include tablet{
+                    height: 40px;
+                }
+
+                &::placeholder{
+                    @include brainFlixBlack;
+                }
+
+            }
+            &-button{
+                background-image: url("../../assets/Images/add_comment.svg");
+                background-repeat: no-repeat;
+                background-position-y: center;
+                background-position-x: 0.5rem;
+                padding: 0.5rem 1rem 0.5rem 2rem;
+                width: 100%;
+                text-align: center;
+                height: 40px;
+                @include brainFlixBlue;
+                @include white;
+                @include buttonBorder;
+                font-weight: 600;
+                line-height: 1.25rem;
+                margin-top: 1rem;
+                @include tablet{
+                    margin-top: 0;
+                    width: 30%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,49 @@
+@use "../../styles/partials/Variables.scss" as *;
+@use "../../styles/partials/Breakpoints.scss" as *;
+
+.list {
+    @include avenirFont;
+    @include tablet {
+        @include tabletDesktopSidePadding;
+    }
+
+    &__item{
+        display: flex;
+        text-align: left;
+        margin: 1rem 1rem 0 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #E1E1E1;
+
+        &-image{
+            width: 44px;
+            height: 44px;
+            background-position: left;
+            background-size: cover;
+            border-radius: 50%;
+            background-color: #E1E1E1;
+            padding-right: 2.75rem;
+        }
+        &-div{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+
+            &-container{
+                display: flex;
+                flex-direction: column;
+                margin-left: 1rem;
+            }
+            &-name{
+                font-weight: 600;
+            }
+            &-date{
+                @include silver;
+            }
+            &-comment{
+
+            }
+        }
+    }
+
+
+}
