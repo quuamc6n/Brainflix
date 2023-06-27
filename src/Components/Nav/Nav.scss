@@ -19,6 +19,7 @@
 }
 
 .nav {
+  border-bottom: 1px solid #E1E1E1;
   @include tablet {
     display: flex;
     justify-content: space-between;
@@ -76,6 +77,10 @@
           background-repeat: no-repeat;
           border-radius: 50%;
         }
+      }
+      
+      & a{
+      width: 100%;
       }
 
       &-button {

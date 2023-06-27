@@ -1,5 +1,5 @@
 import "./JoinTheConversation.scss";
-import uploadImage from "../../assets/Images/upload.svg";
+// import uploadImage from "../../assets/Images/upload.svg";
 
 const JoinTheConversation = () => {
   return (

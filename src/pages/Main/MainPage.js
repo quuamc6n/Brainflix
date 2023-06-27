@@ -1,14 +1,21 @@
-import SelectedVideoInformation from "./components/SelectedVideoInformation/SelectedVideoInformation";
-import VideoList from "./components/VideoList/VideoList";
-import Comments from "./components/Comments/Comments";
-import JoinTheConversation from "./components/JoinTheConversation/JoinTheConversation";
-import SelectedVideo from "./components/SelectedVideo/SelectedVideo";
-import Nav from "./components/Nav/Nav";
+import { useState } from "react";
+import videoData from "../../data/video-details.json"
+import SelectedVideoInformation from "../../Components/SelectedVideoInformation/SelectedVideoInformation";
+import VideoList from "../../Components/VideoList/VideoList";
+import Comments from "../../Components/Comments/Comments";
+import JoinTheConversation from "../../Components/JoinTheConversation/JoinTheConversation";
+import SelectedVideo from "../../Components/SelectedVideo/SelectedVideo";
 
 function MainPage() {
+  const [selectedVideo, setSelectedVideo] = useState(videoData[0]);
+
+  const getDate = (timestamp) => {
+    let date = new Date(timestamp);
+    return date.toLocaleDateString();
+  };
+
   return (
     <div>
-      <Nav />
       <SelectedVideo video={selectedVideo} />
       <SelectedVideoInformation video={selectedVideo} getDate={getDate} />
       <JoinTheConversation />
@@ -16,7 +23,6 @@ function MainPage() {
       <VideoList
         data={videoData}
         video={selectedVideo}
-        clickHandler={clickHandler}
       />
     </div>
   );
