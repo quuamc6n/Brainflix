@@ -6,3 +6,7 @@
     box-sizing: border-box;
     @include avenirFont;
 }
+
+body{
+    @include avenirFont;
+}

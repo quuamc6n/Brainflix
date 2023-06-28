@@ -29,9 +29,9 @@ export default function Nav() {
       </label>
 
       <div className="nav__div-upload">
-        <Link to="UploadPage">
-          <button className="nav__div-upload-button">UPLOAD</button>
-        </Link>
+          <Link to="UploadPage" className="nav__div-upload-link">
+            <button as={Link} className="nav__div-upload-button">UPLOAD</button>
+            </Link>
         <div className="nav__div-upload-tablet"></div>
       </div>
     </nav>

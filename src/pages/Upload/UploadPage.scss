@@ -1,0 +1,73 @@
+@use "../../styles/partials/Breakpoints.scss" as *;
+@use "../../styles/partials/Variables.scss" as *;
+
+.main{
+    text-align: left;
+    @include mobileComponentPadding;
+    &__h2{
+        font-weight: 600;
+    }
+    &__title{
+        @include silver;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+    &__form{
+        &-title{
+            width: 100%;
+            height: 3rem;
+            background-color: #FAFAFA;
+            border: 1px solid #E1E1E1;
+            border-radius: 4px;           
+
+            &-textArea{
+                height: 6rem;
+
+                &::placeholder{
+                    // display: flex;
+                    // align-items: flex-start;
+                }
+            }
+            &::placeholder{
+                @include brainFlixBlack;
+            }
+        }
+    }
+}
+
+.button__publish{
+    background-image: url("../../assets/Images/publish.svg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    @include brainFlixBlue;
+    @include white;
+    @include buttonBorder;
+    font-weight: 600;
+    line-height: 1.25rem;
+    margin-top: 1rem;
+        @include tablet{
+            margin-top: 0;
+            width: 30%;
+    }
+}
+.button__cancel{
+    background-color: #FFFFFF;
+    padding: 0.5rem 1rem 0.5rem 2rem;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    color: #0095FF;
+    border-style: none;
+    font-weight: 600;
+    line-height: 1.25rem;
+    margin-top: 1rem;
+        @include tablet{
+            margin-top: 0;
+            width: 30%;
+    }
+}
