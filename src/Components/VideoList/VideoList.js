@@ -1,36 +1,51 @@
+import { useState, useEffect} from 'react'
+import axios from "axios";
+import { Link } from "react-router-dom";
 import "./VideoList.scss";
 
-const VideoList = (props) => {
-  const filterVideo = props.data.filter((ele) => {
-    return ele.id !== props.video.id;
-  });
+const VideoList = () => {
+  const [videos, setVideos] = useState(null);
+    
+  // const filterVideo = videos.filter((ele) => {
+  //     return ele.id !== videos.id;
+  //   });
+
+    useEffect(() => {
+      axios
+        .get(
+          "https://project-2-api.herokuapp.com/videos/?api_key=%3C5fa51be9-74bb-44ef-8e90-a71d57b38ff6%3E"
+        )
+        .then((response) => {
+          setVideos(response.data);
+        });
+    }, []);
+
+    if (!videos) {
+      return <p>Retrieving videos...</p>;
+    }
 
   return (
     <ul className="video__list">
       <p className="nextVideos">NEXT VIDEOS</p>
-      {filterVideo.map((ele) => {
+      {videos.map((video) => {
         return (
-          <li
-            onClick={() => {
-              props.clickHandler(ele);
-            }}
-            key={ele.id}
-            className="video__list-item"
-          >
-            <div className="video__list-item-image-container">
-              <img
-                className="video__list-item-image"
-                src={ele.image}
-                alt={ele.title}
-              ></img>
-            </div>
-            <div className="video__list-item-text-container">
-              <p className="video__list-item-text video__list-item-text--bold">
-                {ele.title}
-              </p>
-              <p className="video__list-item-text">{ele.channel}</p>
-            </div>
-          </li>
+          <Link key={video.id} to={`videos/${video.id}`}>
+            <li className="video__list-item">
+              <div className="video__list-item-image-container">
+                <img
+                  className="video__list-item-image"
+                  src={video.image}
+                  alt={video.title}
+                ></img>
+              </div>
+              <div className="video__list-item-text-container">
+                <p className="video__list-item-text video__list-item-text--bold">
+                  {video.title}
+                </p>
+                <p className="video__list-item-text">{video.channel}</p>
+              </div>
+            </li>
+          </Link>
         );
       })}
     </ul>

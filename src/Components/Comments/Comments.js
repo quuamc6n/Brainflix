@@ -1,6 +1,7 @@
 import "./Comments.scss";
 
 const Comments = (props) => {
+  console.log("IN COMMENTS", props)
   const comment = props.data.comments;
 
   return (
