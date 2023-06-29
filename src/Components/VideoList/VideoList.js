@@ -5,31 +5,46 @@ import "./VideoList.scss";
 
 const VideoList = () => {
   const [videos, setVideos] = useState(null);
-    
+
   // const filterVideo = videos.filter((ele) => {
   //     return ele.id !== videos.id;
   //   });
+  //   console.log(filterVideo)
 
-    useEffect(() => {
-      axios
-        .get(
-          "https://project-2-api.herokuapp.com/videos/?api_key=%3C5fa51be9-74bb-44ef-8e90-a71d57b38ff6%3E"
-        )
-        .then((response) => {
-          setVideos(response.data);
-        });
-    }, []);
+  //   const clickHandler = ((videos) => {
+  //     setVideos(videos);
+  //   })
 
-    if (!videos) {
-      return <p>Retrieving videos...</p>;
-    }
+  //films is state below
+  // filteredFilms = films.filter(() => {film.id !==
+  // selectedFilm.id }) -> Just give the list of all films
+  // that excludes the state. Use the filtered films array and
+  // .map the filtered, not the full list
+  // const clickHandler = (selectedFilm) => {
+  // setSelectedFilm(selectedFilm); }
+  // From here, you want to add the onClick to the Link
+  // object created in the .map videoList
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://project-2-api.herokuapp.com/videos/?api_key=%3C5fa51be9-74bb-44ef-8e90-a71d57b38ff6%3E"
+      )
+      .then((response) => {
+        setVideos(response.data);
+      });
+  }, []);
+
+  if (!videos) {
+    return <p>Retrieving videos...</p>;
+  }
 
   return (
     <ul className="video__list">
       <p className="nextVideos">NEXT VIDEOS</p>
       {videos.map((video) => {
         return (
-          <Link key={video.id} to={`videos/${video.id}`}>
+          <Link key={video.id} to={`/videos/${video.id}`}>
             <li className="video__list-item">
               <div className="video__list-item-image-container">
                 <img

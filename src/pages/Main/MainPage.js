@@ -52,7 +52,7 @@ function MainPage() {
     <div>
       <SelectedVideo />
       {/*video={selectedVideo}*/}
-      {/* {/* <SelectedVideoInformation video={videos} getDate={getDate} /> */}
+      {/* <SelectedVideoInformation /> */}
       <JoinTheConversation />
       {/* <Comments data={videos} getDate={getDate} /> */}
       {/* <VideoList data={videoData} video={videos} /> */}

@@ -3,6 +3,8 @@ import './App.css';
 import MainPage from './pages/Main/MainPage';
 import UploadPage from './pages/Upload/UploadPage';
 import Nav from "./Components/Nav/Nav";
+// import VideoPlayer from './pages/VideoPlayer/VideoPlayer';
+// import SelectedVideo from './Components/SelectedVideo/SelectedVideo';
 import VideoPlayer from './pages/VideoPlayer/VideoPlayer';
 // import VideoList from './Components/VideoList/VideoList';
 // import SelectedVideo from './Components/SelectedVideo/SelectedVideo';
@@ -14,7 +16,7 @@ return (
       <Nav />
       <Routes>
         <Route path="/" element={<MainPage />}></Route>
-        <Route path="/videos/:videoId" element={<VideoPlayer />}></Route>
+        <Route path="videos/:videoId" element={<VideoPlayer />}></Route>
         <Route path="UploadPage" element={<UploadPage />}></Route>
       </Routes>
     </BrowserRouter>

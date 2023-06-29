@@ -32,14 +32,15 @@ const SelectedVideo = () => {
   }
 
   return (
-    <div className="selectedVideo__div">
-      {console.log(video.video)}
-      <video
-        className="selectedVideo"
-        src={video.video}
-        poster={video.image}
-      ></video>
-    </div>
+    <main>
+      <div className="selectedVideo__div">
+        <video
+          className="selectedVideo"
+          src={video.video}
+          poster={video.image}
+        ></video>
+      </div>
+    </main>
   );
 };
 
