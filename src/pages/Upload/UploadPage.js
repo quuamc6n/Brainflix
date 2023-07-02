@@ -1,11 +1,12 @@
- import "./UploadPage.scss";
+import "./UploadPage.scss";
 
-const UploadPage = () => {
+
+function UploadPage() {
   return (
     <main className="main">
       <h2 className="main__h2">Upload Video</h2>
       <p className="main__title">VIDEO THUMBNAIL</p>
-      <img></img>
+      <img src="../../assets/Images/Upload-video-preview" alt="Upload Videa Preview"></img>
       <p className="main__title">TITLE YOUR VIDEO</p>
       <form className="main__form">
         <label className="main__form-label">

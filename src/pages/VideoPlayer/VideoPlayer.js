@@ -10,7 +10,6 @@ function VideoPlayer(props) {
     // const [videoList, setVideoList] = useState(props.videoList)
 
     // {filterVideo && <VideoPlayer>}
-    console.log("Videoplayer", props.filterVideo)
 
   return (
     <div>

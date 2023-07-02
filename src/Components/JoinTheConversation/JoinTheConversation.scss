@@ -26,11 +26,10 @@
             background-size: cover;
             border-radius: 50%;
             background-color: #E1E1E1;
-            padding-right: 2.75rem;
             position: relative;
             top: 34px;
             @include tablet{
-                top: 24px;
+                top: 38px;
             }
         }
         &-form{

@@ -39,6 +39,7 @@
 
     &-search-input {
       @include buttonBorder;
+      margin-right: 1rem;
     }
 
     &-div {
