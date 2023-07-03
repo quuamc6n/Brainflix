@@ -1,6 +1,4 @@
 import navLogo from "../../assets/Images/BrainFlix-logo.svg"
-// import avatar from "../../assets/Images/Mohan-muruge.jpg"
-// import uploadImage from "../../assets/Images/upload.svg"
 import "./Nav.scss"
 import { Link } from 'react-router-dom';
 
@@ -30,7 +28,7 @@ export default function Nav() {
 
       <div className="nav__div-upload">
           <Link to="UploadPage" className="nav__div-upload-link">
-            <button as={Link} className="nav__div-upload-button">UPLOAD</button>
+            <div className="nav__div-upload-button">UPLOAD</div>
             </Link>
         <div className="nav__div-upload-tablet"></div>
       </div>

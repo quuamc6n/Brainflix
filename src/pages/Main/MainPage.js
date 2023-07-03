@@ -1,37 +1,13 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-// import videoData from "../../data/video-details.json"
-// import SelectedVideoInformation from "../../Components/SelectedVideoInformation/SelectedVideoInformation";
+import SelectedVideoInformation from "../../Components/SelectedVideoInformation/SelectedVideoInformation";
 import VideoList from "../../Components/VideoList/VideoList";
-// import Comments from "../../Components/Comments/Comments";
+import Comments from "../../Components/Comments/Comments";
 import JoinTheConversation from "../../Components/JoinTheConversation/JoinTheConversation";
 import SelectedVideo from "../../Components/SelectedVideo/SelectedVideo";
 import axios from "axios";
-// import HomeList from "../../Components/HomeList/HomeList";
-// import VideoPlayer from "../VideoPlayer/VideoPlayer";
 
 function MainPage() {
-  // const [videos, setVideos] = useState(null);
-  // const video = props.videoList[0];
-
-  // useEffect(() => {
-  //   axios
-  //     .get(
-  //       "https://project-2-api.herokuapp.com/videos/?api_key=%3C5fa51be9-74bb-44ef-8e90-a71d57b38ff6%3E"
-  //     )
-  //     .then((response) => {
-  //       setVideo(response.data[0])
-  //     });
-  // }, []);
-
-  // if (!video) {
-  //   return <p>Retrieving videos...</p>;
-  // }
-
-  // const getDate = (timestamp) => {
-  //   let date = new Date(timestamp);
-  //   return date.toLocaleDateString();
-  // };
 
   const { videoId } = useParams();
   const [selectedVideo, setSelectedVideo] = useState(null);
@@ -57,15 +33,6 @@ function MainPage() {
         .then((response) => {
           setSelectedVideo(response.data);
         });
-      // }else{
-      //   axios
-      //     .get(
-      //       "https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=%3C5fa51be9-74bb-44ef-8e90-a71d57b38ff6%3E"
-      //     )
-      //     .then((response) => {
-      //       // console.log("Third console", response.data);
-      //       setSelectedVideo(response.data);
-      //     });
     }
   }, [videoId]);
 
@@ -80,12 +47,10 @@ function MainPage() {
   return (
     <div>
       <SelectedVideo selectedVideo={selectedVideo} />
-      {/*video={selectedVideo}*/}
-      {/* <SelectedVideoInformation /> */}
+      <SelectedVideoInformation />
       <JoinTheConversation />
-      {/* <Comments data={videos} getDate={getDate} /> */}
+      <Comments />
       <VideoList filterVideo={filterVideo} />
-      {/* <HomeList videos={props.videoList} video={video} /> */}
     </div>
   );
 }

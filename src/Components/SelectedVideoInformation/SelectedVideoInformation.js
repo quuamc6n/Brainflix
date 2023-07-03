@@ -46,7 +46,6 @@ const SelectedVideoInformation = () => {
         <div className="selectedInfo__main-tablet">
           <p className="selectedInfo__channel">By {video.channel}</p>
           <p className="selectedInfo__date">
-            {/* {props.getDate(props.video.timestamp)} */}
             {getDate(video.timestamp)}
           </p>
         </div>

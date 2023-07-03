@@ -1,25 +1,7 @@
-import { useState, useEffect } from "react";
-import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./VideoList.scss";
 
 const VideoList = (props) => {
-
-  // const clickHandler = ((video) => {
-  //   setVideoList(videoList);
-  // })
-
-  //films is state below
-  // filteredFilms = films.filter(() => {film.id !==
-  // selectedFilm.id }) -> Just give the list of all films
-  // that excludes the state. Use the filtered films array and
-  // .map the filtered, not the full list
-  // const clickHandler = (selectedFilm) => {
-  // setSelectedFilm(selectedFilm); }
-  // From here, you want to add the onClick to the Link
-  // object created in the .map videoList
-
-  // console.log(props.videoList)
 
   return (
     <ul className="video__list">

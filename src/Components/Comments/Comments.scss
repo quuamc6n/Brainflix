@@ -2,26 +2,30 @@
 @use "../../styles/partials/Breakpoints.scss" as *;
 
 .list {
+    padding-left: 1rem;
     @include avenirFont;
     @include tablet {
         @include tabletDesktopSidePadding;
+        padding-left: 2rem;
     }
 
     &__item{
         display: flex;
         text-align: left;
-        margin: 1rem 1rem 0 1rem;
+        margin: 1rem 1rem 0 0;
         padding-bottom: 1rem;
         border-bottom: 1px solid #E1E1E1;
 
         &-image{
             width: 44px;
             height: 44px;
-            background-position: left;
-            background-size: cover;
             border-radius: 50%;
             background-color: #E1E1E1;
-            padding-right: 2.75rem;
+            padding-right: 2.5rem;
+            @include tablet{
+                padding-right: 1.5rem;
+            }
+
         }
         &-div{
             display: flex;
@@ -35,12 +39,14 @@
             }
             &-name{
                 font-weight: 600;
+                margin-top: 0;
+                margin-bottom: 0;
             }
             &-date{
                 @include silver;
             }
             &-comment{
-
+                margin-top: 0;
             }
         }
     }
