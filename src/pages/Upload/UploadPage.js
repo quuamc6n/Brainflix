@@ -4,10 +4,6 @@ import { Link } from "react-router-dom";
 
 function UploadPage() {
 
-// const redirect = () => {
-
-// }
-
 const onclickFunc = () => {
   alert("Form successfully received");
   window.location.href = "/";
