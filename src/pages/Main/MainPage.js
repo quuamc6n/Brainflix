@@ -8,7 +8,6 @@ import SelectedVideo from "../../Components/SelectedVideo/SelectedVideo";
 import axios from "axios";
 
 function MainPage() {
-
   const { videoId } = useParams();
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [videos, setVideos] = useState([]);
@@ -16,13 +15,24 @@ function MainPage() {
   useEffect(() => {
     axios
       .get(
-        `https://project-2-api.herokuapp.com/videos/?api_key=%3C5fa51be9-74bb-44ef-8e90-a71d57b38ff6%3E`
+        `http://localhost:5050`
       )
       .then((videoList) => {
         setVideos(videoList.data);
         setSelectedVideo(videoList.data[0]);
       });
   }, []);
+
+  // useEffect(() => {
+  //   axios
+  //     .get(
+  //       `https://project-2-api.herokuapp.com/videos/?api_key=%3C5fa51be9-74bb-44ef-8e90-a71d57b38ff6%3E`
+  //     )
+  //     .then((videoList) => {
+  //       setVideos(videoList.data);
+  //       setSelectedVideo(videoList.data[0]);
+  //     });
+  // }, []);
 
   useEffect(() => {
     if (videoId) {
