@@ -7,6 +7,10 @@
         @include tabletDesktopSidePadding;
     }
 
+    &-link{
+        text-decoration: none;
+    }
+
     &-item{
         display: flex;
         align-items: center;
@@ -55,8 +59,4 @@
     @include mobileComponentPadding;
     font-weight: 500;
     text-align: left;
-}
-
-a {
-    text-decoration: none;
 }
