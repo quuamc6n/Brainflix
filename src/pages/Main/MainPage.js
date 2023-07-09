@@ -15,7 +15,7 @@ function MainPage() {
   useEffect(() => {
     axios
       .get(
-        `http://localhost:5050`
+        `http://localhost:5050/videos`
       )
       .then((videoList) => {
         setVideos(videoList.data);
@@ -34,17 +34,29 @@ function MainPage() {
   //     });
   // }, []);
 
-  useEffect(() => {
-    if (videoId) {
-      axios
-        .get(
-          `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=%3C5fa51be9-74bb-44ef-8e90-a71d57b38ff6%3E`
-        )
-        .then((response) => {
-          setSelectedVideo(response.data);
-        });
-    }
-  }, [videoId]);
+useEffect(() => {
+  if (videoId) {
+    axios
+      .get(
+        `http://localhost:5050/videos/${videoId}`
+      )
+      .then((response) => {
+        setSelectedVideo(response.data);
+      });
+  }
+}, [videoId]);
+
+  // useEffect(() => {
+  //   if (videoId) {
+  //     axios
+  //       .get(
+  //         `https://project-2-api.herokuapp.com/videos/${videoId}?api_key=%3C5fa51be9-74bb-44ef-8e90-a71d57b38ff6%3E`
+  //       )
+  //       .then((response) => {
+  //         setSelectedVideo(response.data);
+  //       });
+  //   }
+  // }, [videoId]);
 
   const filterVideo = videos.filter((ele) => {
     return ele.id !== selectedVideo.id;
