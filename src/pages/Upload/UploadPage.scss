@@ -1,5 +1,6 @@
 @use "../../styles/partials/Breakpoints.scss" as *;
 @use "../../styles/partials/Variables.scss" as *;
+@use "../../styles/partials/Resets.scss" as *;
 
 .main {
   text-align: left;
@@ -78,6 +79,7 @@
   }
   &-tablet {
     display: none;
+    height: 1.5rem;
     @include tablet {
       display: block;
       background-color: #ffffff;
@@ -140,4 +142,8 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+a {
+  margin: 0 4rem 1rem 0;
 }
