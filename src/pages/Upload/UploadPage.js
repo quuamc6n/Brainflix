@@ -52,7 +52,7 @@ const onSubmit = async (e) => {
           <div className="button__cancel">CANCEL</div>
         </div>
         <div className="main__div-buttons-tablet">
-          <Link to="/">
+          <Link className="button__publish-tablet" to="/">
             <div className="button__publish-tablet">CANCEL</div>
           </Link>
           <button className="button__cancel-tablet">PUBLISH</button>
