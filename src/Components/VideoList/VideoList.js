@@ -8,10 +8,12 @@ const VideoList = (props) => {
       <p className="nextVideos">NEXT VIDEOS</p>
       {props.filterVideo.map((video) => {
         return (
-          <Link className="video__list-link" key={video.id} to={`/videos/${video.id}`}>
-            <li
-              className="video__list-item"
-            >
+          <Link
+            className="video__list-link"
+            key={video.id}
+            to={`/videos/${video.id}`}
+          >
+            <li className="video__list-item">
               <div className="video__list-item-image-container">
                 <img
                   className="video__list-item-image"

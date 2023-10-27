@@ -10,7 +10,9 @@ const SelectedVideo = () => {
   useEffect(() => {
     if (videoId) {
       axios
-        .get(`https://brainflexbackend.onrender.com/videos/${videoId}`)
+        .get(
+          `https://brainflexbackend.onrender.com/videos/${videoId}`
+        )
         .then((response) => {
           setVideo(response.data);
         });
