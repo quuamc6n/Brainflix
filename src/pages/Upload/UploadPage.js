@@ -12,7 +12,7 @@ const onSubmit = async (e) => {
     description: e.target.description.value,
   };
   try {
-    await axios.post("https://brainflexbackend.onrender.com", formData);
+    await axios.post("https://brainflexbackend.onrender.com/videos", formData);
     alert("Form successfully submitted");
     window.location.href = "/";
   } catch (error) {
