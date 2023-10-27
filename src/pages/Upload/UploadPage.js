@@ -1,6 +1,7 @@
 import "./UploadPage.scss";
-import UploadImage from "../../assets/Images/Upload-video-preview.jpg"
+import UploadImage from "../../assets/Images/Upload-video-preview.jpg";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function UploadPage() {
 
@@ -51,7 +52,9 @@ const onSubmit = async (e) => {
           <div className="button__cancel">CANCEL</div>
         </div>
         <div className="main__div-buttons-tablet">
-          <div className="button__publish-tablet">CANCEL</div>
+          <Link to="/">
+            <div className="button__publish-tablet">CANCEL</div>
+          </Link>
           <button className="button__cancel-tablet">PUBLISH</button>
         </div>
       </form>
