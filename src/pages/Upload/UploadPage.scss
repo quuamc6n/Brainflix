@@ -34,10 +34,6 @@
       &-textArea {
         height: 6rem;
 
-        &::placeholder {
-          // display: flex;
-          // align-items: flex-start;
-        }
       }
       &::placeholder {
         @include brainFlixBlack;
@@ -51,7 +47,6 @@
     }
     &-tablet {
       margin-top: 2rem;
-      border-top: 1px solid #e1e1e1;
       padding-top: 2rem;
       @include tablet {
         display: flex;
