@@ -6,7 +6,6 @@ const JoinTheConversation = () => {
       <p className="main__count">3 Comments</p>
       <div className="main__div">
         <div className="main__div-img-container">
-          <img className="main__div-img"></img>
         </div>
         <div className="main__div-form-container">
             <h2 className="main__div-form-h2">JOIN THE CONVERSATION</h2>

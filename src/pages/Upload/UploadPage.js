@@ -1,6 +1,5 @@
 import "./UploadPage.scss";
 import UploadImage from "../../assets/Images/Upload-video-preview.jpg"
-import { Link } from "react-router-dom";
 import axios from "axios";
 
 function UploadPage() {
@@ -13,7 +12,7 @@ const onSubmit = async (e) => {
     description: e.target.description.value,
   };
   try {
-    await axios.post("http://localhost:5050/videos", formData);
+    await axios.post("https://brainflexbackend.onrender.com", formData);
     alert("Form successfully submitted");
     window.location.href = "/";
   } catch (error) {

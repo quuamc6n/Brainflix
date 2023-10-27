@@ -14,9 +14,7 @@ function MainPage() {
 
   useEffect(() => {
     axios
-      .get(
-        `http://localhost:5050/videos`
-      )
+      .get(`https://brainflexbackend.onrender.com/videos`)
       .then((videoList) => {
         setVideos(videoList.data);
         setSelectedVideo(videoList.data[0]);
@@ -26,9 +24,7 @@ function MainPage() {
 useEffect(() => {
   if (videoId) {
     axios
-      .get(
-        `http://localhost:5050/videos/${videoId}`
-      )
+      .get(`https://brainflexbackend.onrender.com/${videoId}`)
       .then((response) => {
         setSelectedVideo(response.data);
       });

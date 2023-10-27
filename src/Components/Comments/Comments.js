@@ -15,16 +15,14 @@ const Comments = () => {
   useEffect(() => {
     if (videoId) {
       axios
-        .get(
-          `http://localhost:5050/videos/${videoId}`
-        )
+        .get(`https://brainflexbackend.onrender.com/videos/${videoId}`)
         .then((response) => {
           setVideo(response.data);
         });
     } else {
       axios
         .get(
-          `http://localhost:5050/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=%3C5fa51be9-74bb-44ef-8e90-a71d57b38ff6%3E`
+          `https://brainflexbackend.onrender.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=%3C5fa51be9-74bb-44ef-8e90-a71d57b38ff6%3E`
         )
         .then((response) => {
           setVideo(response.data);

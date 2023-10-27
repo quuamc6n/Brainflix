@@ -18,16 +18,14 @@ const SelectedVideoInformation = () => {
   useEffect(() => {
     if (videoId) {
       axios
-        .get(
-          `http://localhost:5050/videos/${videoId}`
-        )
+        .get(`https://brainflexbackend.onrender.com/videos/${videoId}`)
         .then((response) => {
           setVideo(response.data);
         });
     } else {
       axios
         .get(
-          `http://localhost:5050/videos/84e96018-4022-434e-80bf-000ce4cd12b8`
+          `https://brainflexbackend.onrender.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8`
         )
         .then((response) => {
           setVideo(response.data);
@@ -36,7 +34,7 @@ const SelectedVideoInformation = () => {
   }, [videoId]);
 
   if (!video) {
-    return <p>Retriving video...</p>;
+    return <p>Retreiving video...</p>;
   }
 
   return (
