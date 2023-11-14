@@ -33,7 +33,7 @@ const Comments = () => {
   }, [videoId]);
 
   if (!video) {
-    return <p>Retriving Comments...</p>;
+    return <p></p>;
   }
 
   return (

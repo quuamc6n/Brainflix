@@ -36,7 +36,7 @@ const SelectedVideoInformation = () => {
   }, [videoId]);
 
   if (!video) {
-    return <p>Retreiving video...</p>;
+    return <p></p>;
   }
 
   return (
