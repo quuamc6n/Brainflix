@@ -28,7 +28,7 @@ const SelectedVideo = () => {
   }, [videoId]);
 
   if (!video) {
-    return <p>Retrieving data. Please be patient, backend is hosted on a free account. It takes a few seconds!</p>;
+    return <p>Retrieving data. Please be patient, backend is hosted on a free account. It takes about a minute!</p>;
   }
   return (
     <main>
